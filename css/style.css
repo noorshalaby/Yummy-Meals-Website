@@ -1,0 +1,103 @@
+body {
+  background-color: #0d0d0d;
+}
+
+.navbar {
+  z-index: 9999;
+}
+.navbar-icons {
+  background-color: #fff;
+  width: 80px;
+}
+
+.navbar-links {
+  background-color: #0d0d0d;
+}
+
+.navbar-icons img {
+  width: 50px;
+}
+
+i,
+li,
+.meal-content,
+.category-content,
+.ingredients-content,
+.area-content {
+  cursor: pointer;
+}
+
+.form-control::placeholder {
+  color: gray;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 0.6s;
+  border-radius: 10px;
+}
+
+.category-content:hover .overlay {
+  height: 100%;
+}
+
+.meal-content:hover .overlay {
+  height: 100%;
+}
+
+#contactUs button {
+  width: 100px;
+}
+
+#openBtn {
+  display: none;
+}
+
+/***** Loader *****/
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #0d0d0d;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/***** End Loader *****/
